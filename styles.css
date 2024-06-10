@@ -1,1 +1,28 @@
 /*  your css code here. If applicable */
+span{
+	color: skyblue;
+}
+h1{
+	text-align: center;
+	margin:10px;
+}
+.form-group{
+	display: flex;
+	flex-direction: column;
+}
+#submit{
+	width:20%;
+	
+	margin-top: 10px;
+	background-color:skyblue;
+	border:none;
+	color: white;
+}
+table{
+	width:100%;
+	margin-top:10px;
+}
+.delete{
+	
+	background-color:red;
+}
