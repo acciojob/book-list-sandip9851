@@ -4,23 +4,21 @@ let author = document.querySelector("#author");
 let ids = document.querySelector("#isbn");
 let tableBody = document.querySelector("#book-list");
 
-document.querySelector("#submit").addEventListener("click", function(event) {
-    event.preventDefault();
-    addRow();
-});
-
+// Use the variables inside the function
 function addRow() {
-  const title = title.value;
-  const author = author.value;
-  const id = ids.value;
+  const titleValue = title.value;
+  const authorValue = author.value;
+  const idValue = ids.value;
   let row = document.createElement("tr");
   row.innerHTML += `
-    <td>${title}</td>
-    <td>${author}</td>
-    <td>${id}</td>
+    <td>${titleValue}</td>
+    <td>${authorValue}</td>
+    <td>${idValue}</td>
     <td><button class="delete">Delete</button></td>`;
   tableBody.append(row);
 }
+
+document.querySelector("#submit").addEventListener("click",addRow)
 function deleteRow(event) {
     let element = event.target;
     element.closest('tr').remove();
